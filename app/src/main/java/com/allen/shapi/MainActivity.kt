@@ -10,7 +10,7 @@ import com.allen.shapi.adapter.HomeAdapter
 import com.allen.shapi.constant.Constant
 import com.allen.shapi.extension.OnItemClickListener
 import com.allen.shapi.extension.addOnItemClickListener
-import com.allen.shapi.task.task1.TaskOneActivity
+import com.allen.shapi.task.task2.TaskTwoActivity
 import com.allen.shapi.widget.SpaceItemDecoration
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             addItemDecoration(recyclerViewItemDecoration)
             addOnItemClickListener(object : OnItemClickListener{
                 override fun onItemClick(position: Int, view: View) {
-                    val intent = Intent(applicationContext, TaskOneActivity::class.java)
+                    val intent = Intent(applicationContext, TaskTwoActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     applicationContext.startActivity(intent)
                 }

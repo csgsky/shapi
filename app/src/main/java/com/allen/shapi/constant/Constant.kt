@@ -1,5 +1,7 @@
 package com.allen.shapi.constant
 
+import android.media.AudioFormat
+
 object Constant {
     val taskNames = arrayListOf<String>(
             "1. 在 Android 平台绘制一张图片，使用至少 3 种不同的 API，ImageView，SurfaceView，自定义 View",
@@ -21,4 +23,16 @@ object Constant {
             "17. 将 librtmp 库移植到 Android 平台，结合上面积累的经验，完成 Android RTMP 推流功能",
             "18. 上面积累的经验，做一款短视频 APP，完成如：断点拍摄、添加水印、本地转码、视频剪辑、视频拼接、MV 特效等功能"
     )
+    /**
+     * 采样率，现在能够保证在所有设备上使用的采样率是44100Hz。
+     */
+    const val SAMPLE_RATE_INHZ = 16000
+    /**
+     * 声道数。声道数分为 MONO 和 STEREO,其中 MONO 可以在所以设备上使用
+     */
+    const val CHANNEL_CONFIG = AudioFormat.CHANNEL_IN_MONO
+    /**
+     * 返回的音频数据格式
+     */
+    const val AUDIO_FORMAT = AudioFormat.ENCODING_PCM_16BIT
 }
